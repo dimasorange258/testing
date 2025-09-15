@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disbudporapar 2025</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+  /* ================= SPLASH SCREEN ================= */
+    .splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #a30d0d; /* merah */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 1s forwards; /* hilang setelah 4 detik */
+    }
+
+    .splash h1 {
+      color: #fff;
+      font-size: 26px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #ffd700;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+      }
+
+    /* Salam */
+    .welcome {
+      background: #8e0e0e; color: #fff; text-align: center;
+      padding: 12px; font-size: 20px; font-weight: bold;
+    }
+
+    header {
+      background: #9e1f1f; padding: 15px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 2px 4px rgba(239, 234, 234, 0.973);
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo img { height: 60px; width: auto; object-fit: contain; }
+    .logo h1 { font-size: 18px; color: #fff; margin: 0; }
+    nav a { margin-left:20px; text-decoration:none; color:#fff; font-weight:bold; }
+    nav a:hover { color:#ffd700; }
+
+    main { padding: 40px 30px; background: #f5f5f5; }
+
+    /* Zigzag section */
+    .zigzag { display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
+    .zigzag img { width: 45%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .zigzag .text { width: 55%; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+    /* Baris genap dibalik */
+    .zigzag.reverse { flex-direction: row-reverse; }
+
+    footer {
+      background: #8e0e0e; padding: 20px 30px;
+      font-size: 14px; color: #f7f1f1; text-align: center;
+    }
+
+    @media(max-width:768px){
+      .zigzag, .zigzag.reverse { flex-direction: column; }
+      .zigzag img, .zigzag .text { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<body>
+   <div class="splash">
+    <h1>Memuat Halaman...</h1>
+    <div class="loader"></div>
+  </div> 
+  <!-- ================= KONTEN UTAMA ================= -->
+  <div class="content-wrapper">
+    <div class="welcome">
+      <marquee behavior="scroll" direction="left">
+        Selamat datang di web resmi Mahasiswa UNESA x Disbudporapar
+      </marquee>
+    </div>
+
+    <header>
+      <div class="logo">
+        <img src="https://www.freepnglogos.com/uploads/logo-pu-png/pu-logo-kabupaten-mojokerto-kumpulan-logo-indonesia-12.png" alt="logo dispora">
+        <img src="https://bootflare.com/wp-content/uploads/2024/01/UNESA-Logo-1536x864.png" alt="logo unesa">
+        <h1>WISATA MOJOKERTO</h1>
+      </div>
+      <nav>
+        <a href="beranda.html">Beranda</a>
+        <a href="halaman_2.html">Berita </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Zigzag 1 -->
+      <div class="zigzag">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\WEB 11 2.jpg" alt="Foto 1">
+        <div class="text">
+          <h2>Wisata Alam di Mojokerto</h2>
+          <p>
+            <P>Mojokerto tidak hanya dikenal dengan peninggalan sejarah Majapahit, tetapi juga menyimpan pesona alam yang luar biasa indah. Di kaki Gunung Welirang dan Gunung Penanggungan, kita bisa menemukan udara sejuk, pemandangan hijau, serta destinasi wisata alam yang menenangkan jiwa.</P>
+
+<P>Sebut saja Sumber Gempong, sebuah pemandian alami dengan air jernih yang menyegarkan, cocok untuk melepas penat sekaligus menikmati suasana pedesaan. Tak jauh dari itu, gunung-gunung di Mojokerto seperti Gunung Penanggungan menawarkan jalur pendakian menantang dengan panorama matahari terbit yang memukau, sementara Gunung Welirang menyajikan petualangan alam penuh kesegaran.</P>
+
+<P><B></B> 🌿✨ Jadi, tunggu apa lagi? Ayo kunjungi Mojokerto dan nikmati keindahan sumber-sumber alami dan gunung-gunung yang menawan!</B></P>
+          </p>
+        </div>
+      </div>
+
+      <!-- Zigzag 2 -->
+      <div class="zigzag reverse">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\halaman 11 1.jpg" alt="Foto 2">
+        <div class="text">
+          <h2>Jelajahi Candi-Candi Bersejarah di Mojokerto</h2>
+          <p>
+            <P>Mojokerto dikenal sebagai pusat kejayaan Kerajaan Majapahit. Hingga kini, berbagai candi peninggalannya masih berdiri megah dan menyimpan kisah sejarah yang menarik untuk dikunjungi.</P>
+
+<P>Beberapa candi yang bisa Anda jelajahi antara lain Candi Bajang Ratu dengan relief Ramayana yang indah, Candi Tikus berupa petirtaan unik peninggalan keluarga kerajaan, Candi Brahu yang diyakini tempat upacara kremasi raja, hingga Candi Wringin Lawang—gerbang megah setinggi 15 meter yang menjadi ikon pintu masuk Majapahit. Ada pula Candi Kedaton dengan temuan arkeologi penting, serta Candi Gentong yang menyimpan kesan misterius.</P>
+
+<P>Keunggulan berkunjung ke candi-candi ini tidak hanya menikmati arsitektur kuno dari bata merah khas Majapahit, tetapi juga merasakan langsung atmosfer kejayaan Nusantara. Selain itu, kawasan ini sangat cocok untuk wisata edukasi, fotografi, maupun sekadar menikmati perjalanan sejarah bersama keluarga.</P>
+          </p>
+        </div>
+      </div>
+
+<!-- Zigzag 3 -->
+      <div class="zigzag">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\WEB 11 3.png" alt="Foto 1">
+        <div class="text">
+          <h2>Café Hits di Mojokerto</h2>
+          <p>
+            <P>Café modern yang menawarkan pengalaman nongkrong seru. Dengan konsep unik, suasana nyaman, serta menu yang menggugah selera, café-café di Mojokerto menjadi destinasi favorit anak muda maupun keluarga. </p>
+
+<p>Salah satunya adalah Rustic Market, café bernuansa alam terbuka yang sejuk dengan dekorasi estetik, cocok untuk bersantai sambil berfoto. Ada juga 8 Meter, café minimalis dengan sajian kopi nikmat dan suasana hangat, pas untuk tempat kerja maupun kumpul bersama teman. Tak kalah menarik, Homma hadir dengan konsep modern cozy, menyajikan aneka menu kekinian yang bikin betah berlama-lama. Bagi pecinta kopi, Black Dew jadi pilihan tepat dengan racikan kopi khas dan vibes yang tenang.</p>
+
+<p><b>☕✨ Jadi, tunggu apa lagi? Yuk, jelajahi café-café hits Mojokerto dan temukan spot favoritmu untuk bersantai maupun berkarya!</b></p>
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      Kontak: 085755646429 | Email: dimasorange258@gmail.com | 
+      Alamat: Jl. Jayanegara No.4, Mergelo, Meri, Kec. Magersari, Kota Mojokerto, Jawa Timur 61363 <br>
+      Designed by Mahasiswa prodi Pendidikan Akuntansi angkatan 2023 Unesa
+    </footer>
+  </div>
+  <!-- ================= END KONTEN UTAMA ================= -->
+
+</body>
+</html>

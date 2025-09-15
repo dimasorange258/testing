@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disbudporapar Kab. Mojokerto</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    /* ================= SPLASH SCREEN ================= */
+    .splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #a30d0d; /* merah */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 1s forwards; /* hilang setelah 4 detik */
+    }
+
+    .splash h1 {
+      color: #fff;
+      font-size: 26px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #ffd700;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+      }
+
+    /* Bagian paling atas */
+    .welcome {
+      background: #8f0606;
+      color: #fff;
+      text-align: center;
+      padding: 8px;
+      font-weight: bold;
+    }
+
+    /* Header */
+    header {
+      background: #a30d0d;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo img { height: 60px; }
+    .logo h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #fff;
+    }
+
+   nav a {
+      margin-left:20px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:bold;
+    }
+    nav a:hover { color:#ffd700; }
+
+    /* Konten utama */
+    main {
+      display: flex;
+      gap: 25px;
+      padding: 25px;
+    }
+
+    .main-isi {
+      flex: 3;
+      background: white;
+    }
+
+    .main-isi img {
+      max-width: 50%;
+      border-radius: 4px;
+      margin-bottom: 9px;
+    }
+
+    .main-isi h2 {
+      color: black;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .main-isi p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      color: #a30d0d;
+      font-weight: bold;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .sidebar ul li a:hover {
+      color: #a30d0d;
+    }
+
+    footer {
+      background: #8e0e0e;
+      padding: 20px 30px;
+      font-size: 14px;
+      color: #f7f1f1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <body>
+   <div class="splash">
+    <h1>Memuat Halaman...</h1>
+    <div class="loader"></div>
+  </div> 
+
+  <!-- Tulisan sambutan -->
+  <div class="welcome">
+    <marquee behavior="scroll" direction="left">
+      Selamat datang di web resmi Mahasiswa UNESA x Disbudporapar
+    </marquee>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://www.freepnglogos.com/uploads/logo-pu-png/pu-logo-kabupaten-mojokerto-kumpulan-logo-indonesia-12.png" alt="Logo Kab. Mojokerto">
+      <img src="https://bootflare.com/wp-content/uploads/2024/01/UNESA-Logo-1536x864.png" alt="Logo Unesa">
+      <h1>BERITA</h1>
+    </div>
+    <nav>
+      <a href="beranda.html">Beranda</a>
+      <a href="halaman_2.html">Berita</a>
+    </nav>
+  </header>
+
+  <!-- Konten utama -->
+  <main>
+    <!-- Artikel -->
+    <div class="main-isi">
+      <img src="D:\magang\WEB PROJEK DISPORAPAR\web\tikus 1.png" alt="Gambar berita">
+      <h2>Misteri di Balik Nama Candi Tikus : Mengapa Pemandian Kuno ini Unik dan Bersejarah? </h2>
+      <p>
+        <p>Mojokerto, Jawa Timur, dikenal sebagai <b>"Tanah Para Raja"</b> karena jejak Kerajaan Majapahit yang tersebar di mana-mana. Namun, ada satu situs yang paling unik dan misterius, bukan karena ukurannya yang besar, melainkan karena namanya yang aneh dan penemuan yang tak terduga: Candi Tikus. Sekilas, nama ini mungkin terdengar sepele, tetapi di balik itu tersembunyi cerita sejarah yang menarik, arsitektur yang memukau, dan fungsi yang masih diperdebatkan hingga kini.</p>
+<p>Penamaan <b> "Candi Tikus"</b> tidak ada hubungannya dengan fungsi candi itu sendiri. Nama ini muncul setelah warga setempat secara tidak sengaja menemukan gundukan bukit di area persawahan pada tahun 1914. Gundukan ini, yang menjadi sarang bagi banyak tikus, ternyata menyimpan sebuah kompleks candi yang terkubur di bawahnya. Setelah penggalian dilakukan, barulah terlihat struktur utuh dari candi yang sangat unik. Penemuan tak disengaja ini menjadi pintu gerbang bagi para arkeolog untuk menyelami lebih dalam peradaban Majapahit yang kaya.</p> <p>Jika Anda membayangkan sebuah candi menjulang tinggi dengan arca di dalamnya, Candi Tikus akan mengejutkan Anda. Sebaliknya, candi ini adalah sebuah petirtaan atau pemandian kuno yang menyerupai miniatur. Seluruh kompleksnya dibangun di bawah permukaan tanah dan dikelilingi oleh kolam air. Di bagian tengah, terdapat bangunan utama yang berundak-undak, mereplikasi bentuk Gunung Semeru atau Gunung Meru, gunung suci dalam mitologi Hindu-Buddha.
+Fungsi Candi Tikus yang Menjadi Perdebatan Para Ahlip </p> <br> 
+<p>1.	Tempat Pemandian Keluarga Kerajaan : Teori ini didukung dengan adanya penemuan saluran saluran air yang saling terhubung dan mengalir ke dalam kolam. Diperkirakan para raja menggunakan tempat ini sebagai Ritual penyucian diri. <br> 
+2.	Tempat Penyucian Benda Pusaka : Beberapa Arkeolog memiliki teori bahwa candi ini digunakan sebagai tempat penyucian benda pusaka untuk upacara upacara besar.</p> 
+
+<p>Keindahan Arsitektur Candi Tikus 
+Detail Aristektur yang tersembunyi memiliki keindahan yang luar biasa. Dindingnya dihiasi relief relief halus yang menggambarkan bunga Teratai,pancuran air berbentuk naga dan ornament yang melambangkan kesuburan dan kesucian. Penemuan elemen yang indah ini menunjukkan bahwa para arsitek majapahit memiliki keahlian tinggi dalam mengolah bata merah dan menjadikannya karya seni yang megah dan penuh makna filosofis.</p> 
+      </p>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>BERITA TERBARU</h3>
+      <ul>
+        <li><a href="halaman_10.Html">Kegiatan Pariwisata 2025</a></li>
+        <li><a href="#">Event Budaya Kabupaten Mojokerto</a></li>
+        <li><a href="#">Olahraga & Pemuda</a></li>
+        <li><a href="#">Pengumuman Resmi Disporapar</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Kontak: 085755646429 | Email: dimasorange258@gmail.com| Alamat: Jl. Jayanegara No.4, Mergelo, Meri, Kec. Magersari, Kota Mojokerto, Jawa Timur 61363 <br>
+    Designed by Mahasiswa prodi pendidikan Akuntansi angkatan 2023 Unesa
+  </footer>
+
+</body>
+</html>

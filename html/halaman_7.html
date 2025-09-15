@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disporapar 2025</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#f5f5f5; }
+ /* ================= SPLASH SCREEN ================= */
+    .splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #a30d0d; /* merah */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 1s forwards; /* hilang setelah 4 detik */
+    }
+
+    .splash h1 {
+      color: #fff;
+      font-size: 26px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #ffd700;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+      }
+    /* Salam di atas */
+    .welcome {
+      background: #8e0e0e;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    header {
+      background: #9e1f1f; 
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(239, 234, 234, 0.973);
+    }
+
+    .logo { display:flex; align-items:center; gap:10px; }
+    .logo img { height:60px; }
+    .logo h1 { color:#fff; margin:0; font-size:22px; font-weight:bold; }
+
+    nav a {
+      margin-left:20px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:bold;
+    }
+    nav a:hover { color:#ffd700; }
+
+    /* Layout 2 kolom */
+    main {
+      display:grid;
+      grid-template-columns: 2fr 1fr;
+      gap:20px;
+      padding:20px 30px;
+    }
+
+    /* Kolom kiri */
+    .left-col h3 {
+      color:#b31010;
+      font-size:18px;
+      font-weight:bold;
+      margin-bottom:15px;
+    }
+    .left-col .news-small {
+      display:flex;
+      align-items:flex-start;
+      margin-bottom:20px;
+      background:#fff;
+      padding:10px;
+      border-radius:6px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .left-col .news-small:hover {
+      transform: translateY(-5px);
+      box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    }
+    .left-col img {
+      width:90px; height:70px; object-fit:cover; border-radius:4px; margin-right:12px;
+      transition: transform 0.3s ease;
+    }
+    .left-col .news-small:hover img {
+      transform: scale(1.05);
+    }
+    .left-col h4 {
+      font-size:15px; margin:0; font-weight:bold;
+    }
+    .left-col h4 a {
+      text-decoration:none;
+      color:#000;
+    }
+    .left-col h4 a:hover {
+      color:#b31010;
+    }
+
+    /* Kolom kanan (berita terbaru) */
+    .right-col {
+      background:#fff;
+      padding:15px;
+      border-radius:6px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    .right-col h3 {
+      color:#b31010;
+      font-size:18px;
+      font-weight:bold;
+      margin-top:0;
+    }
+    .right-col ul {
+      list-style:none;
+      padding:0; margin:0;
+    }
+    .right-col ul li {
+      margin-bottom:10px;
+    }
+    .right-col ul li a {
+      text-decoration:none;
+      color:#000;
+      font-size:15px;
+    }
+    
+    .sidebar ul li a:hover {
+      color: #a30d0d;
+    }
+
+    footer {
+      background: #8e0e0e;
+      padding: 50px 60px;
+      font-size: 14px;
+      color: #f7f1f1;
+      text-align: center;
+    }
+
+    /* Tombol bulat bawah */
+    .bottom-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .bottom-buttons a {
+      width: 50px;
+      height: 50px;
+      background: #b31010;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .bottom-buttons a:hover {
+      background: #ff0000;
+      transform: scale(1.1);
+    }
+
+    /* Tombol bulat floating lama */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .floating-buttons a {
+      width: 50px;
+      height: 50px;
+      background: #b31010;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .floating-buttons a:hover {
+      background: #ff0000;
+      transform: scale(1.1);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Salam -->
+   <div class="splash">
+    <h1>Memuat Halaman...</h1>
+    <div class="loader"></div>
+  </div> 
+  
+  <div class="welcome">
+    <marquee behavior="scroll" direction="left">
+      Selamat datang di web resmi Mahasiswa UNESA x Disporapar
+    </marquee>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://www.freepnglogos.com/uploads/logo-pu-png/pu-logo-kabupaten-mojokerto-kumpulan-logo-indonesia-12.png" alt="logo dispora">
+      <img src="https://bootflare.com/wp-content/uploads/2024/01/UNESA-Logo-1536x864.png" alt="logo unesa">
+      <h1>BERITA</h1>
+    </div>
+    <nav>
+      <a href="beranda.html">Beranda</a>
+      <a href="halaman_2.html">Berita</a>
+    </nav>
+  </header>
+
+  <!-- Konten utama -->
+  <main>
+    <!-- Kolom kiri -->
+    <div class="left-col">
+      <h3>BERITA PILIHAN</h3>
+
+      <div class="news-small">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\candi bajang 2.png" alt="berita 1">
+        <div>
+          <h4><a href="Halaman_9.html">
+            Misteri Megahnya Gerbang Kerajaan yang Penuh Misteri di Mojokerto 
+          </a></h4>
+          <p>Di Tengah hamparan sawah dan pemukiman Dusun Kraton,Desa Temon, Kabupaten Mojokerto berdiri tegak sebuah mahakarya arsitektur yang memukau: Gapura Bajang Ratu. </p>
+        </div>
+      </div>
+
+      <div class="news-small">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\tikus 1.png" alt="berita 4">
+        <div>
+          <h4><a href="Halaman_10.html">
+           Misteri di Balik Nama Candi Tikus : Mengapa Pemandian Kuno ini Unik dan Bersejarah? 
+          </a></h4>
+          <p>Mojokerto, Jawa Timur, dikenal sebagai "Tanah Para Raja" karena jejak Kerajaan Majapahit yang tersebar di mana-mana. </p>
+        </div>
+      </div>
+
+      <div class="news-small">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\candi.png" alt="berita 4">
+        <div>
+          <h4><a href="Halaman_5.html">
+            Menguak Misteri Candi Brahu, Bukti Kerajaan Majapahit yang Toleran
+          </a></h4>
+          <p>Candi Brahu diyakini menjadi salah satu peninggalan bersejarah Majapahit yang mencerminkan nilai toleransi.</p>
+        </div>
+      </div>
+
+      <div class="news-small">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\penyda 2.jpg" alt="berita 4">
+        <div>
+          <h4><a href="Halaman_6.html">
+            Pemkab Mojokerto Gelar Lomba Pemuda Pelopor 2025, Dorong Inovasi Anak Muda
+MOJOKERTO 
+          </a></h4>
+          <p>Lomba Pemuda Pelopor 2025 ini bertujuan untuk menemukan dan mengapresiasi pemuda-pemuda yang memiliki karya nyata dan berkualitas serta memberikan dampak positif .</p>
+        </div>
+      </div>
+
+      <div class="news-small">
+        <img src="D:\magang\WEB PROJEK DISPORAPAR\web\dlundung.png" alt="berita 4">
+        <div>
+          <h4><a href="halaman_6.html">
+           Menyusuri Jejak Air Suci di Mojokerto: Petirtaan Jolotundo, Saksi Bisu Peradaban Kuno
+          </a></h4>
+          <p>tersembunyi sebuah situs purbakala yang memancarkan aura sakral dan sejarah yang dalam: Petirtaan Jolotundo. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kolom kanan -->
+    <div class="right-col">
+      <h3>BERITA TERBARU</h3>
+      <ul>
+        <li><a href="halaman_10.Html">Kegiatan Pariwisata 2025</a></li>
+        <li><a href="#">Event Budaya Kabupaten Mojokerto</a></li>
+        <li><a href="#">Olahraga & Pemuda</a></li>
+        <li><a href="#">Pengumuman Resmi Disporapar</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Tombol bawah baru -->
+  <div class="bottom-buttons">
+    <a href="halaman_2.html">1</a>
+    <a href="halaman_7.html">2</a>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    Kontak: 085755646429 | Email: dimasorange258@gmail.com| Alamat: Jl. Jayanegara No.4, Mergelo, Meri, Kec. Magersari, Kota Mojokerto, <br> Jawa Timur 61363 Designed by  Mahasiswa prodi pendidikan Akuntansi angkatan 2023 Unesa
+  </footer>
+
+</body>
+</html>
