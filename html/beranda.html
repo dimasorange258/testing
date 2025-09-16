@@ -80,6 +80,7 @@
     }
     /* ---------------- END SPLASH ---------------- */
 
+    /* ---------------- HEADER DAN WELCOME ---------------- */
     .welcome {
       background: #8e0e0e;
       color: #fff;
@@ -95,6 +96,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap; /* biar logo dan menu bisa turun ke bawah di hp */
       box-shadow: 0 2px 4px rgba(239, 234, 234, 0.973);
     }
 
@@ -102,6 +104,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap; /* supaya tidak pecah di hp */
     }
 
     .logo img {
@@ -124,6 +127,7 @@
     }
     nav a:hover { color:#ffd700; }
 
+    /* ---------------- KONTEN ---------------- */
     main {
       padding: 40px 30px;
       background: #f5f5f5;
@@ -254,9 +258,10 @@
       z-index: 1;
       font-size: 18px;
       color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* biar makin jelas */
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
 
+    /* ---------------- FOOTER ---------------- */
     footer {
       background: #8e0e0e;
       padding: 20px 30px;
@@ -264,10 +269,35 @@
       color: #f7f1f1;
       text-align: center;
     }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 768px) {
+      /* Header lebih rapat */
+      header { flex-direction: column; text-align: center; }
+      nav a { margin: 10px; display: inline-block; }
+
+      /* Konten utama jadi kolom */
+      .content { flex-direction: column; }
+      .sidebar { margin-top: 20px; }
+
+      /* Bagian ucapan terima kasih lebih kecil */
+      .thankyou-section {
+        margin: 20px;
+        height: auto;
+        padding: 40px 20px;
+      }
+      .thankyou-content { font-size: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .typing { font-size: 16px; } /* teks efek mengetik lebih kecil */
+      .logo img { height: 40px; }
+      .news-item h3 { font-size: 14px; }
+      footer { font-size: 12px; }
+    }
   </style>
 </head>
 <body>
-
   <!-- ================= SPLASH SCREEN ================= -->
   <div class="splash">
     <div class="splash-logos">
@@ -299,6 +329,7 @@
 
     <main>
       <div class="content">
+        <!-- KONTEN UTAMA -->
         <div class="main-isi">
           <div class="today-hits">
             <h2>TODAY HITS</h2>
@@ -306,6 +337,7 @@
                Berita terbaru dan informasi utama akan ditampilkan di bagian ini.</p>
           </div>
 
+          <!-- GRID BERITA -->
           <div class="news-grid">
             <div class="news-item">
               <img src="images/penyda 2.jpg" alt="berita 1">
@@ -325,6 +357,7 @@
           </div>
         </div>
 
+        <!-- SIDEBAR -->
         <aside class="sidebar">
           <h3>Berita Terbaru</h3>
           <ul>
@@ -337,7 +370,7 @@
       </div>
     </main>
 
-    <!-- Bagian Background Ucapan Terima Kasih -->
+    <!-- BAGIAN BACKGROUND UCAPAN TERIMA KASIH -->
     <div class="thankyou-section">
       <div class="slideshow-bg"></div>
       <div class="thankyou-content">
@@ -345,6 +378,7 @@
       </div>
     </div>
 
+    <!-- FOOTER -->
     <footer>
       Kontak: 085755646429 | Email: dimasorange258@gmail.com | 
       Alamat: Jl. Jayanegara No.4, Mergelo, Meri, Kec. Magersari, Kota Mojokerto, Jawa Timur 61363 <br>
@@ -352,12 +386,5 @@
     </footer>
   </div>
   <!-- ================= END KONTEN UTAMA ================= -->
-
 </body>
 </html>
-
-
-
-
-
-
